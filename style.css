@@ -1,0 +1,176 @@
+@-webkit-keyframes gradient_transition {
+	0% {
+		top: 0;
+		left: 0;
+	}
+	50% {
+		top: -200%;
+		left: -200%;
+	}
+	100% {
+		top: 0;
+		left: 0;
+	}
+  }
+  @-moz-keyframes gradient_transition {
+	0% {
+		top: 0;
+		left: 0;
+	}
+	50% {
+		top: -200%;
+		left: -200%;
+	}
+	100% {
+		top: 0;
+		left: 0;
+	}
+  }
+  @-o-keyframes gradient_transition {
+	0% {
+		top: 0;
+		left: 0;
+	}
+	50% {
+		top: -200%;
+		left: -200%;
+	}
+	100% {
+		top: 0;
+		left: 0;
+	}
+  }
+  @keyframes gradient_transition {
+	0% {
+		top: 0;
+		left: 0;
+	}
+	50% {
+		top: -200%;
+		left: -200%;
+	}
+	100% {
+		top: 0;
+		left: 0;
+	}
+}
+
+body {
+	color: #3c3c3c;
+	font-family: "Roboto";
+	font-family: 'Montserrat', sans-serif;
+	font-weight: lighter;
+	overflow: hidden;
+}
+
+body::before, body::after {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+body::after {
+	content: "";
+	width: 400%;
+	height: 400%;
+	opacity: 0.8;
+	background: -moz-linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background: -webkit-linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	-webkit-animation: gradient_transition 15s ease infinite;
+	-moz-animation: gradient_transition 15s ease infinite;
+	-o-animation: gradient_transition 15s ease infinite;
+	animation: gradient_transition 15s ease infinite;
+}
+
+#app {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	font-weight: lighter;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	
+}
+
+.app {
+	background: rgba(255, 255, 255, 0.315);
+	border-radius: 30px;
+	padding: 20px;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0;
+}
+
+li {
+	list-style-type:none;
+}
+
+.header {
+	border: 0;
+	border-bottom: #0000004d 1px solid;
+}
+
+.contactItem {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 32px;
+}
+
+.contactItem a {
+	margin: 0 16px;
+	padding: 0;
+}
+
+.contactLabel {
+	margin: 0 16px;
+	padding: 0;
+}
+
+.contactImage {
+	align-self: center;
+	padding-left: 16px;
+}
+
+.contactData {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 32px;
+}
+
+.Input-text {
+	display: flex;
+	margin-bottom: 20px;
+	padding: 0 16px;
+	color: inherit;
+	min-width: 362px;
+	line-height: 40px;
+	border: none;
+	border-radius: 0.4rem;
+}
+
+.button {
+	display: block;
+	margin-bottom: 20px;
+	color: inherit;
+	min-width: 394px;
+	line-height: 40px;
+	border: none;
+	border-radius: 0.4rem;
+}
+
+.Input-text::placeholder {
+	color: #B0BEC5;
+}
+
+.Input-text:focus {
+	outline: none;
+}
